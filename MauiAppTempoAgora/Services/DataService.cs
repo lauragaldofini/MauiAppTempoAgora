@@ -27,7 +27,7 @@ namespace MauiAppTempoAgora.Services
                 {
                     string json = await resp.Content.ReadAsStringAsync();
 
-                    var rascunho = J(json);
+                    var rascunho = JObject.Analisar(json);
 
                     DateTime time = new();
                     DateTime sunrise = time.AddSeconds((double)rascunho["sys"]["sunrise"]).ToLocalTime();
@@ -47,7 +47,7 @@ namespace MauiAppTempoAgora.Services
                         sunset = sunset.ToString(),
                     }; 
                 } 
-            } 
+            }
 
             return t;
         }
