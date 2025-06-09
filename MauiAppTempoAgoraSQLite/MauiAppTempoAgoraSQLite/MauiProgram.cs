@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace MauiAppTempoAgoraSQLite
+namespace MauiAppTempoSQLite
 {
     public static class MauiProgram
     {
